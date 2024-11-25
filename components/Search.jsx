@@ -2,12 +2,14 @@
 
 import { useDebounce } from "@/hooks/useDebounce";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import SearchResult from "./SearchResult";
 
 export default function Search({ docs }) {
   const [searchResult, setSearchResult] = useState([]);
   const [term, setTerm] = useState("");
+  const router = useRouter();
 
   function handleChange(e) {
     const value = e.target.value;
@@ -22,6 +24,12 @@ export default function Search({ docs }) {
     console.log("🚀 ~ found ~ found:", found);
     setSearchResult(found);
   }, 1000);
+
+  function closeSearchResults(event) {
+    event.preventDefault();
+    router.push(event.target.href);
+    setTerm("");
+  }
 
   return (
     <>
@@ -50,7 +58,7 @@ export default function Search({ docs }) {
         <SearchResult
           results={searchResult}
           term={term}
-          // closeSearchResults={closeSearchResults}
+          closeSearchResults={closeSearchResults}
         />
       )}
     </>
