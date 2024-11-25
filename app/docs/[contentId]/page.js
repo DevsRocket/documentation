@@ -1,3 +1,5 @@
+import ContentDisplay from "@/components/ContentDisplay";
+
 export default function ContentPage({ params: { contentId } }) {
-  return <div>{contentId}</div>;
+  return <ContentDisplay id={contentId} />;
 }

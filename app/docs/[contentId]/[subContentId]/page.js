@@ -1,3 +1,5 @@
+import ContentDisplay from "@/components/ContentDisplay";
+
 export default function SubContentPage({ params: { subContentId } }) {
-  return <div>{subContentId}</div>;
+  return <ContentDisplay id={subContentId} />;
 }
