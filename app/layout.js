@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Loading from "@/components/Loading";
 import { getDocuments } from "@/lib/doc";
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
                 </div>
                 {children}
               </main>
+              <Footer />
             </div>
           </Suspense>
         </div>
