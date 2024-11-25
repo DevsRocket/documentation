@@ -20,6 +20,20 @@ const geistMono = localFont({
 export const metadata = {
   title: "Documentation - A documentation website by DevsRocket",
   description: "A documentation website by DevsRocket",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/favicons/Favicon.png",
+        href: "/favicons/Favicon.png",
+      },
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/favicons/Favicon-dark.png",
+        href: "/favicons/Favicon-dark.png",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
