@@ -13,6 +13,7 @@ export default function Error({ error, reset }) {
       <h2>Something went wrong!</h2>
       <h2>{error?.message}</h2>
       <button
+        className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()
