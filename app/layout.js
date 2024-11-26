@@ -39,7 +39,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const allDocuments = getDocuments();
-  console.log("🚀 ~ RootLayout ~ allDocuments:", allDocuments);
+
   return (
     <html lang="en">
       <body

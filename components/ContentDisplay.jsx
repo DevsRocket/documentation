@@ -4,7 +4,6 @@ import Tag from "./Tag";
 
 export default async function ContentDisplay({ id }) {
   const documentContent = await getDocumentContent(id);
-  console.log("🚀 ~ ContentDisplay ~ documentContent:", documentContent);
 
   return (
     <article className="prose dark:prose-invert">
