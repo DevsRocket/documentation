@@ -29,6 +29,7 @@ export default function Landing() {
             </div>
             <div className="relative lg:col-span-3">
               <Image
+                alt="banner"
                 src="/banner.png"
                 width="1600"
                 height="1280"

@@ -12,7 +12,6 @@ import CustomLink from "./CustomLink";
 
 export default function Sidebar({ docs }) {
   const pathName = usePathname();
-  console.log("🚀 ~ Sidebar ~ pathName:", pathName);
   const [rootNodes, setRootNodes] = useState([]);
   const [nonRootNodesGrouped, setNonRootNodesGrouped] = useState({});
 
