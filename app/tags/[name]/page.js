@@ -2,6 +2,16 @@ import ContentDisplay from "@/components/ContentDisplay";
 import { getDocuments } from "@/lib/doc";
 import { getDocumentsByTag } from "@/utils/doc-util";
 
+export function generateStaticParams() {
+  const docs = getDocuments();
+
+  const uniqueTags = [...new Set(docs.flatMap((doc) => doc.tags))];
+
+  return uniqueTags.map((tag) => ({
+    name: tag,
+  }));
+}
+
 export default function TagPage({ params: { name } }) {
   const docs = getDocuments();
   const matchedDocuments = getDocumentsByTag(docs, name);

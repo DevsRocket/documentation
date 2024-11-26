@@ -3,7 +3,7 @@ title: "Analysis"
 date: "2024-11-25"
 parent: null
 order: 4
-author: "Md. Asif Iqbal & Rahat Khan Pathan"
+author: "Rahat Khan Pathan"
 category: analytics
 tags: ["technology", "analytics"]
 ---

@@ -3,7 +3,7 @@ title: "Introduction"
 date: "2024-11-25"
 parent: null
 order: 1
-author: "Md. Asif Iqbal & Rahat Khan Pathan"
+author: "Md. Asif Iqbal"
 category: "General"
 tags: ["intro", "getting-started"]
 ---
