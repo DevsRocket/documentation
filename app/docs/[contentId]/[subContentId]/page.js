@@ -1,5 +1,13 @@
 import ContentDisplay from "@/components/ContentDisplay";
-import { getDocuments } from "@/lib/doc";
+import { getDocumentContent, getDocuments } from "@/lib/doc";
+
+export async function generateMetadata({ params: { subContentId } }) {
+  const documentContent = await getDocumentContent(subContentId);
+
+  return {
+    title: documentContent.title,
+  };
+}
 
 export function generateStaticParams() {
   const docs = getDocuments();
