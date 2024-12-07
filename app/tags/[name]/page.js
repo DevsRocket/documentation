@@ -2,6 +2,15 @@ import ContentDisplay from "@/components/ContentDisplay";
 import { getDocuments } from "@/lib/doc";
 import { getDocumentsByTag } from "@/utils/doc-util";
 
+export async function generateMetadata({ params: { name } }) {
+  const docs = getDocuments();
+  const matchedDocs = getDocumentsByTag(docs, name)[0];
+
+  return {
+    title: matchedDocs.title,
+  };
+}
+
 export function generateStaticParams() {
   const docs = getDocuments();
 
