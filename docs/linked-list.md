@@ -1,14 +1,13 @@
 ---
-title: "Analysis"
-date: "2024-11-25"
-parent: null
-order: 4
-author: "Rahat Khan Pathan"
-category: analytics
-tags: ["technology", "analytics"]
+title: "Linked List"
+date: "2024-12-07"
+parent: data-structures-and-algorithms
+author: Asif-102
+category: "DSA"
+tags: ["DSA"]
 ---
 
-## About Analysis
+## About Resources
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore pariatur repellendus vero doloremque sint, quod aliquid possimus
 esse labore maxime quaerat error enim! Velit incidunt soluta pariatur doloribus hic! Distinctio earum ea enim repudiandae repellat
