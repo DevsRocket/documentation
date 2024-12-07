@@ -78,16 +78,18 @@ export default function Sidebar({ docs }) {
                 </CustomLink>
                 {nonRootNodesGrouped[rootNode.id] && (
                   <ul role="list" className="border-l border-transparent">
-                    {nonRootNodesGrouped[rootNode.id].map((subRoot) => (
-                      <li key={subRoot.id}>
-                        <CustomLink
-                          className="flex justify-between gap-2 py-1 pl-7 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-                          path={`/docs/${rootNode.id}/${subRoot.id}`}
-                        >
-                          <span className="truncate">{subRoot.title}</span>
-                        </CustomLink>
-                      </li>
-                    ))}
+                    {nonRootNodesGrouped[rootNode.id]
+                      .sort((a, b) => new Date(a.date) - new Date(b.date))
+                      .map((subRoot) => (
+                        <li key={subRoot.id}>
+                          <CustomLink
+                            className="flex justify-between gap-2 py-1 pl-7 pr-3 text-sm text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
+                            path={`/docs/${rootNode.id}/${subRoot.id}`}
+                          >
+                            <span className="truncate">{subRoot.title}</span>
+                          </CustomLink>
+                        </li>
+                      ))}
                   </ul>
                 )}
               </li>
