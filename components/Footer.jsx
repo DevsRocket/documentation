@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="mx-auto max-w-2xl space-y-10 pb-16 lg:max-w-5xl">
@@ -24,6 +26,30 @@ export default function Footer() {
             </button>
           </div>
         </form>
+      </div>
+      <div className="flex flex-col prose dark:prose-invert border-t border-zinc-900/5 pt-8 dark:border-white/5">
+        <h3>Connect</h3>
+        <Link href="https://github.com/DevsRocket" target="_blank">
+          Github
+        </Link>
+        <Link href="https://www.facebook.com/devsrocket" target="_blank">
+          Facebook
+        </Link>
+        <Link
+          href="https://www.linkedin.com/company/devsrocket"
+          target="_blank"
+        >
+          Linkedin
+        </Link>
+        <Link href="https://x.com/devs_rocket" target="_blank">
+          X (Twitter)
+        </Link>
+        <Link href="https://www.youtube.com/@DevsRocket" target="_blank">
+          YouTube
+        </Link>
+        <Link href="https://www.instagram.com/devs_rocket/" target="_blank">
+          Instagram
+        </Link>
       </div>
       <div className="flex flex-col items-center justify-between gap-5 border-t border-zinc-900/5 pt-8 dark:border-white/5 sm:flex-row">
         <p className="text-xs text-zinc-600 dark:text-zinc-400">
